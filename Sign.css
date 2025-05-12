@@ -1,0 +1,343 @@
+:root{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    width: 100vw; 
+    height: 100vh; 
+    overflow: hidden; 
+    --gradient: linear-gradient(#303030, black);
+    --base-color: rgb(0, 0, 0);
+    --text-color: white; 
+    --accent-color: #004953;
+    --primary-color: rgb(37, 37, 37);
+    --input-text: rgb(189, 188, 188) ;
+  }
+  
+  .whitemode {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    height: 2000px;
+    --gradient: linear-gradient(rgb(168, 168, 168), white);;
+    --base-color: white;
+    --text-color: black; 
+    --accent-color: #367588;
+    --primary-color: rgb(54, 54, 54);
+    --input-text: rgb(223, 223, 223) ;
+  }
+
+  body{
+    font-family: "arial", Sans-serif;
+    background: var(--gradient);
+    color: var(--text-color);
+  }  
+
+  #message{
+    position: absolute;
+    top: 6rem;
+    left: 39%;
+  }
+  #messagelog{
+    position: absolute;
+    top: 19rem;
+    left: 39.8%;
+  }
+    #name{
+    position: absolute;
+    top: 11.5rem;
+    left: 41%;
+  }
+  #name-bar{
+    border-radius: 15px;
+    padding: 5px 10px;
+    width: 170px;
+    height: 40px;
+    position: absolute;
+    top: 14.5rem;
+    right: 60rem;
+    transition-duration: 0.4s;
+    background-color: rgb(0, 0, 0);
+  }
+  #name-bar input {
+    color: white;
+    border: none;
+    outline: none;
+    position: fixed;
+    padding: 8px 10px;
+    top: 15rem;
+    font-size: 1rem;
+    background: transparent;
+  }
+  #name-bar:hover {
+    box-shadow: 0 0 5px var(--text-color);
+  }
+
+  #surname{
+    position: absolute;
+    top: 11.5rem;
+    left: 52%;
+  }
+  #surname-bar{
+    border-radius: 15px;
+    padding: 5px 10px;
+    width: 170px;
+    height: 40px;
+    position: absolute;
+    top: 14.5rem;
+    right: 47rem;
+    transition-duration: 0.4s;
+    background-color: rgb(0, 0, 0);
+  }
+  #surname-bar input {
+    color: white;
+    border: none;
+    outline: none;
+    position: fixed;
+    padding: 8px 10px;
+    top: 15rem;
+    font-size: 1rem;
+    background: transparent;
+  }
+  #surname-bar:hover {
+    box-shadow: 0 0 5px var(--text-color);
+  }
+
+  #usrn{
+    position: absolute;
+    top: 18rem;
+    left: 41%;
+  }
+  #usrn-bar{
+    border-radius: 15px;
+    padding: 5px 10px;
+    width: 380px;
+    height: 40px;
+    position: absolute;
+    top: 21rem;
+    right: 47rem;
+    transition-duration: 0.4s;
+    background-color: rgb(0, 0, 0);
+  }
+  #usrn-bar input {
+    color: white;
+    border: none;
+    outline: none;
+    position: fixed;
+    padding: 8px 10px;
+    top: 21.5rem;
+    font-size: 1rem;
+    background: transparent;
+  }
+  #usrn-bar ::placeholder {
+    color: rgb(189, 188, 188);
+  }
+  #usrn-bar:hover {
+    box-shadow: 0 0 5px var(--text-color);
+  }
+  #usrnimg {
+    position: fixed;
+    top: 20.55rem;
+    right: 47.8rem;
+  }
+
+  #email{
+    position: absolute;
+    top: 25rem;
+    left: 41%;
+  }
+
+  #email-bar {
+    border-radius: 15px;
+    padding: 5px 10px;
+    width: 380px;
+    height: 40px;
+    position: absolute;
+    top: 28rem;
+    right: 47rem;
+    transition-duration: 0.4s;
+    background-color: rgb(0, 0, 0);
+  }
+  #email-bar input {
+    color: white;
+    border: none;
+    outline: none;
+    position: fixed;
+    padding: 8px 10px;
+    top: 28.5rem;
+    font-size: 1rem;
+    background: transparent;
+  }
+  #email-bar ::placeholder {
+    color: rgb(189, 188, 188);
+  }
+  #email-bar:hover {
+    box-shadow: 0 0 5px var(--text-color);
+  }
+  #emailimg {
+    position: fixed;
+    top: 27.7rem;
+    right: 47.8rem;
+  }
+
+  #pass{
+    position: absolute;
+    top: 32.5rem;
+    left: 41%;
+  }
+
+  #pass-bar {
+    display: flex;
+    align-items: center;
+    border-radius: 15px;
+    padding: 5px 10px;
+    width: 380px;
+    height: 40px;
+    position: absolute;
+    top: 35.5rem;
+    right: 47rem;
+    transition-duration: 0.4s;
+    background-color: rgb(0, 0, 0);
+  }
+  #pass-bar input {
+    color: white;
+    border: none;
+    outline: none;
+    flex: 1;
+    padding: 8px 10px;
+    font-size: 1rem;
+    background: transparent;
+  }
+  #pass-bar ::placeholder {
+    color: rgb(189, 188, 188);
+  }
+  #pass-bar:hover {
+    box-shadow: 0 0 5px var(--text-color);
+  }
+  #passimg{
+    position: fixed;
+    top: 35.1rem;
+    right: 48rem;
+  }
+
+  #next{
+    background-color: var(--accent-color);
+    color: white;
+    cursor: pointer;
+    position: absolute;
+    align-items: center;
+    top: 42.5rem;
+    right: 52rem;
+    height: 55px;
+    border-radius: 40px;
+    padding:  0px 100px;
+    transition-duration: 0.4s;
+    border: none ;
+  }
+  #next:hover {
+    box-shadow: 0 0 10px var(--text-color);
+  }
+  #nextlog{
+    background-color: var(--accent-color);
+    color: white;
+    cursor: pointer;
+    position: absolute;
+    align-items: center;
+    top: 41rem;
+    right: 52rem;
+    height: 55px;
+    border-radius: 40px;
+    padding:  0px 100px;
+    transition-duration: 0.4s;
+    border: none ;
+  }
+  #nextlog:hover {
+    box-shadow: 0 0 10px var(--text-color);
+  }
+
+  #extra{
+    color: var(--text-color);
+    position: absolute;
+    align-items: center;
+    top: 47.5rem;
+    right: 56.8rem;
+    border: none ;
+  }
+  #extra1{
+    color: var(--text-color);
+    position: absolute;
+    align-items: center;
+    top: 45rem;
+    right: 57.5rem;
+    border: none ;
+  }
+
+  
+  #log{
+    color: var(--text-color);
+    cursor: pointer;
+    position: fixed;
+    align-items: center;
+    top: 47.5rem;
+    right: 50rem;
+    height: 0px;
+    padding:  0px 15px;
+    border: none ;
+  }
+  #log1{
+    color: var(--text-color);
+    cursor: pointer;
+    position: fixed;
+    align-items: center;
+    top: 45rem;
+    right: 50rem;
+    height: 0px;
+    padding:  0px 15px;
+    border: none ;
+  }
+
+  #extrasign{
+    color: var(--text-color);
+    position: absolute;
+    align-items: center;
+    top: 50rem;
+    right: 54.9rem;
+    border: none ;
+  }
+
+  #homesign{
+    color: var(--text-color);
+    cursor: pointer;
+    position: fixed;
+    top: 50rem;
+    right: 51.4rem;
+    height: 0px;
+    padding:  0px 15px;
+    border: none ;
+    background-color: black;
+  }
+
+  #extralog{
+    color: var(--text-color);
+    position: absolute;
+    align-items: center;
+    top: 47rem;
+    right: 54.4rem;
+    border: none ;
+  }
+
+  
+  #homelog{
+    color: var(--text-color);
+    cursor: pointer;
+    position: fixed;
+    top: 47rem;
+    right: 51.5rem;
+    border: none ;
+    background: none;
+  }
+
+
+
+
+
+
