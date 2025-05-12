@@ -1,0 +1,313 @@
+:root{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    width: 100vw;
+    height: 100vh;
+    --gradient: linear-gradient(#303030, black);
+    --base-color: rgb(0, 0, 0);
+    --text-color: white; 
+    --accent-color: #004953;
+    --top-bar: black;
+    --primary-color: rgb(37, 37, 37);
+    --input-text: rgb(189, 188, 188) ;
+    --playlist: rgb(22, 22, 22) ;
+  }
+  
+  .whitemode {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    width: 100vw;
+    height: 100vh;
+    --gradient: linear-gradient(rgb(168, 168, 168), white);;
+    --base-color: white;
+    --text-color: black; 
+    --accent-color: #367588;
+    --top-bar: #918f8f;
+    --primary-color: rgb(71, 71, 71);
+    --input-text: rgb(223, 223, 223) ;
+    --playlist: rgb(226, 226, 226) ;
+  }
+  
+  body{
+    font-family: "arial", Sans-serif;
+    background-color: var(--base-color);
+    color: var(--text-color);
+  }
+  .topbar {
+    position: fixed;     
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    background-color: var(--top-bar);
+    display: flex;
+    align-items: center;
+    padding: 0 1rem;  
+    z-index: 1000; /* Ensure it stays on top */
+  }
+  
+  #spotify-btn{
+    cursor: pointer;
+    position: fixed;
+    top: 6px;
+    color: var(--text-color);
+    background-color: var(--top-bar);
+    border: none;
+  }
+  
+  #home{
+    background-color: var(--primary-color);
+    cursor: pointer;
+    position: fixed;
+    right: 46rem;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    padding: 0rem ;
+    transition-duration: 0.4s;
+    border: solid ;
+  }
+  #home:hover {
+    box-shadow: 0 0 10px var(--text-color);
+  }
+  
+  #theme-switch {
+    background-color: var(--primary-color);
+    cursor: pointer;
+    position: fixed;
+    right: 7rem;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    padding: 0rem 0.25rem ;
+    transition-duration: 0.4s;
+    border: solid ;
+  }
+  #theme-switch svg {
+    padding: 0.5rem 0.2rem ;
+    fill: var(--text-color);
+  }
+  #theme-switch svg:last-child{
+    display:none;
+  }
+  .whitemode #theme-switch svg:first-child{
+    display: none;
+  }
+  .whitemode #theme-switch svg:last-child{
+    display: block;
+    fill: var(--base-color);
+  }
+  #theme-switch:hover {
+    background-color: rgb(185, 185, 185);
+  }
+  /* Hovering in white mode (invert swap again) */
+  .whitemode #theme-switch:hover svg:first-child {
+    display: block;
+  }
+  
+  .whitemode #theme-switch:hover svg:last-child {
+    display: none;
+  }
+  /* Hovering in dark mode (invert swap again) */
+   #theme-switch:hover svg:last-child {
+    
+    display: block;
+    fill: black;
+  }
+  
+   #theme-switch:hover svg:first-child {
+    display: none;
+  }
+
+  #log-out{
+  background-color: var(--top-bar);
+  color: var(--input-text);
+  cursor: pointer;
+  position: fixed;
+  right: 1rem;
+  top: 2%;
+  align-items: center;
+  border-radius: 40px;
+  border: none ;
+}
+  
+  #search-bar {
+    display: flex;
+    align-items: center;
+    border-radius: 25px;
+    padding: 5px 10px;
+    width: 450px;
+    height: 40px;
+    position: fixed;
+    top: 1rem;
+    right: 50rem;
+    transition-duration: 0.4s;
+    background-color: var(--primary-color);
+  }
+  #search-bar input {
+    color: white;
+    border: none;
+    outline: none;
+    flex: 1;
+    padding: 8px 10px;
+    font-size: 1.1rem;
+    background: transparent;
+  }
+  #search-bar button {
+    width: 1;
+    zoom: 110%;
+    background: none;
+    border: none;
+    cursor: pointer;
+  
+  }
+  #search-bar ::placeholder {
+    color: var(--input-text);
+  }
+  #search-bar:hover {
+    box-shadow: 0 0 10px var(--text-color);
+  }
+  
+
+  
+  #sidebar {
+    position: fixed;     
+    top: 9%;
+    bottom:1%;
+    width: 400px;
+    border-radius: 20px;
+    background: var(--gradient);
+    overflow-y: auto;
+  }
+  /* Target the scrollbar */
+#sidebar::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track (background) */
+#sidebar::-webkit-scrollbar-track {
+  background: #1e1e1e;
+  border-radius: 3px;
+}
+
+/* Handle (scroll thumb) */
+#sidebar::-webkit-scrollbar-thumb {
+  background: rgb(87, 87, 87);
+  border-radius: 3px;
+}
+
+/* Handle on hover */
+#sidebar::-webkit-scrollbar-thumb:hover {
+  background: #666;
+}
+  
+  #library{
+    position: absolute;
+    left: 30px;
+    top:10px;
+  }
+  
+  #add{
+    background-color: var(--playlist);
+    border: none;
+    background: transparent;
+    position: absolute;
+    top: 3.3%;
+    left: 80%;
+    cursor: pointer;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    padding: 0.2rem 0rem;
+  }
+  #add:hover{
+    background-color: var(--playlist);
+  }
+  .whitemode #add svg:first-child{
+    fill: var(--text-color);
+  }
+  .whitemode #add svg:last-child {
+    display: none;
+  }
+  #add svg {
+    fill: var(rgb(185, 185, 185));
+  }
+  #add svg:last-child{
+    display:none;
+  }
+  
+  .playlist{
+    background-color: var(--accent-color);
+    cursor: pointer;
+    position: absolute;
+    top: 5%;
+    left: 2rem;
+    width: 150px;
+    height: 150px;
+    border-radius: 15%;
+    border: none ;
+  }
+
+/* Style the tab */
+.tab {
+  position: fixed;     
+  top: 9%;
+  bottom:1%;
+  left: 420px;
+  width: calc(100vw - 400px);
+  height: 100vh;
+  border-radius: 20px;
+  background: var(--gradient);
+}
+
+/* Style the buttons inside the tab */
+#tabprofile {
+  position: relative;
+  color: var(--text-color);
+  left: 3rem;
+  top: 0.5rem;
+  background-color: var(--accent-color);
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+}
+#tabhome {
+  position: relative;
+  color: var(--text-color);
+  left: 36rem;
+  top: 0.5rem;
+  background-color: var(--accent-color);
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+}
+#tabfriends {
+  position: relative;
+  color: var(--text-color);
+  left: 75rem;
+  top: 0.5rem;
+  background-color: var(--accent-color);
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+}
+/* Style the tab content */
+.tabcontent {
+  padding: 16px 20px;
+  border: none;
+}
+
+
+  
+  
+  

@@ -1,0 +1,5 @@
+- Αρχική σελίδα 
+- σελίδα το Login 
+- σελίδα logged in
+- Έχει playlist, artists, user, collection, album (στο link)
+- light/dark theme
