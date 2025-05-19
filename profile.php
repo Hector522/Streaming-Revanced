@@ -66,6 +66,9 @@ $list_stmt->execute();
 $list_result = $list_stmt->get_result();
 ?>
 
+
+
+
 <!DOCTYPE html>
 <html lang="el">
 <head>
@@ -93,6 +96,7 @@ $list_result = $list_stmt->get_result();
     <p><strong>Λίστες:</strong> <?= $total_lists ?> (Δημόσιες: <?= $public_lists ?>)</p>
     <p><strong>Ακολουθεί:</strong> <?= $following_count ?> χρήστες</p>
     <p><strong>Ακόλουθοι:</strong> <?= $followers_count ?> χρήστες</p>
+    
 
     <h3> Δημόσιες λίστες:</h3>
     <?php if ($list_result->num_rows > 0): ?>
@@ -109,6 +113,13 @@ $list_result = $list_stmt->get_result();
         <p>Δεν έχει δημόσιες λίστες.</p>
     <?php endif; ?>
     <?php $list_stmt->close(); ?>
+
+    <?php if (isset($_SESSION['user_id']) && $_SESSION['user_id'] == $profile_id): ?>
+       
+       <p><a href="edit_profile.php">⚙️ Επεξεργασία προφίλ</a></p>
+
+    <?php endif; ?>
+
 
     <p><a href="dashboard.php">⬅ Επιστροφή</a></p>
 </body>

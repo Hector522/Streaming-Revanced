@@ -54,7 +54,11 @@ $stmt->close();
             <h3>Χρήστης: <?= htmlspecialchars($user['username']) ?></h3>
             <ul>
                 <?php foreach ($user['lists'] as $list): ?>
-                    <li><?= htmlspecialchars($list['title']) ?></li>
+                        <li>
+                            <a href="list_videos.php?list_id=<?= $list['id'] ?>">
+                                <?= htmlspecialchars($list['title']) ?>
+                            </a>
+                        </li>
                 <?php endforeach; ?>
             </ul>
             <hr>

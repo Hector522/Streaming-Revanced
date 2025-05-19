@@ -98,6 +98,12 @@ $result = $stmt->get_result();
         <img src="uploads/<?= htmlspecialchars($dash_img) ?>" alt="Εικόνα Προφίλ" width="100" style="border-radius: 50%; margin-bottom: 10px;">
     <?php endif; ?>
 
+    <p>
+     <a href="profile.php?user_id=<?= $_SESSION['user_id'] ?>" style="padding: 10px; background-color: #222; color: white; text-decoration: none; border-radius: 6px;">
+        👤View Profile 
+     </a>
+    </p>
+
 
     <!-- Δημιουργία λίστας -->
     <h3>Δημιουργία νέας λίστας</h3>
@@ -185,19 +191,26 @@ $result = $stmt->get_result();
         <input type="submit" value="Αποσύνδεση">
     </form>
 
+    <head>
+        <meta charset="UTF-8">
+        <title>Dashboard</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
 
-    <?php include 'users.php'; ?>
     <p><a href="users.php">+Ανακάλυψε Χρήστες</a></p>
 
     <p>
-    <a href="followed_lists.php" style="font-weight:bold;"> Δες λίστες από χρήστες που ακολουθείς</a>
+        <a href="followed_lists.php" style="font-weight:bold;"> Δες λίστες από χρήστες που ακολουθείς</a>
     </p>
 
     <p><a href="search.php"> Αναζήτηση στις λίστες & βίντεο</a></p>
         
-    <p><a href="edit_profile.php">⚙️ Επεξεργασία προφίλ</a></p>
-
     <p><a href="import_youtube.php">📥 Εισαγωγή βίντεο από YouTube</a></p>
+
+    <p>
+        <a href="export_yaml.php" style="font-weight: bold;">📤 Εξαγωγή σε YAML</a>
+    </p>
+
 
 </body>
 </html>
